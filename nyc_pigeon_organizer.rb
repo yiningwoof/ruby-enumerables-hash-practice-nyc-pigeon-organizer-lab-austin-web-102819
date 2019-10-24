@@ -13,4 +13,16 @@
 #   new_data
 # end
 
+def nyc_pigeon_organizer(data)
+  new_data = {}
+  # all_pigeons = data[:gender][:male] + data[:gender][:female]
+  # all_pigeons.each{|pigeon| new_data[pigeon] = {}}
+  data.each{|cat, items| items.each{|item_name, pigeons_arr| pigeons_arr.each{|pigeon|
 
+  new_data[pigeon] ||= {}
+  new_data[pigeon][cat] ||= []
+  new_data[pigeon][cat].append(item_name.to_s)
+
+  }}}
+  new_data
+end
